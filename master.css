@@ -373,6 +373,7 @@ header nav .toggle-menu ul {
 
 /*Start Shop Section*/
 .shop {
+  max-width: 100vw;
   margin: 2rem;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -492,9 +493,10 @@ header nav .toggle-menu ul {
 .products .models .box .image {
   max-width: 350px;
   margin-bottom: 0.5rem;
+  margin-right: 1rem;
 }
 .products .models .box .image img {
-  max-width: 100%;
+  max-width: 95%;
 }
 .products .rating {
   display: flex;
