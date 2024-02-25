@@ -36,11 +36,11 @@ a {
   margin: 0 auto;
   padding: 0 20px;
 }
-
 /*Start Header*/
 header {
   margin: 10px;
   height: 53px;
+  max-width: 100vw;
 }
 header nav {
   display: flex;
@@ -160,7 +160,8 @@ header nav .toggle-menu ul {
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
-  min-width: 90%;
+  max-width: 100vw;
+  margin-right: auto;
 }
 .landing article h1 {
   font-size: 70px;
@@ -261,7 +262,7 @@ header nav .toggle-menu ul {
 }
 @media (max-width: 991px) {
   .landing {
-    gap: 10rem;
+    gap: 0;
     grid-template-columns: 1fr;
     margin-top: 0px;
   }
@@ -272,9 +273,6 @@ header nav .toggle-menu ul {
   .landing article .box {
     display: flex;
     justify-content: center;
-  }
-  .landing .model {
-    display: flex;
   }
   .landing .model {
     margin: 0 auto;
@@ -293,7 +291,8 @@ header nav .toggle-menu ul {
 }
 @media (max-width: 767px) {
   .landing {
-    gap: 100px;
+    row-gap: 100px;
+    max-width: 100vw;
   }
   .landing article h1 {
     font-size: 35px;
@@ -303,6 +302,7 @@ header nav .toggle-menu ul {
   .landing article p {
     margin-bottom: 25px;
     max-width: fit-content;
+    text-align: center;
   }
   .landing article .box {
     margin: 0 auto;
@@ -328,7 +328,7 @@ header nav .toggle-menu ul {
     left: -40%;
   }
   .landing .model {
-    margin-top: -50px;
+    margin: -50px auto;
   }
   .landing .model .box .rec {
     max-width: 15rem;
@@ -337,7 +337,7 @@ header nav .toggle-menu ul {
   .landing .model .box .model-pic {
     max-width: 20rem;
     max-height: 20rem;
-    left: 30px;
+    left: 20px;
     top: -53px;
   }
   .landing .model .box .g1,
@@ -528,5 +528,112 @@ header nav .toggle-menu ul {
 /*Start Offer Section*/
 .offer {
   background-color: #554c3b;
+  border-radius: 5px;
+  display: grid;
+  grid-template-columns: 40% 1fr;
+  position: relative;
+  height: 450px;
+}
+.offer .left-section {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  bottom: -42px;
+}
+.offer .left-section img.model {
+  position: absolute;
+  max-width: 300px;
+  top: -48px;
+}
+.offer .left-section img.dots {
+  position: absolute;
+  left: 110px;
+  top: 65%;
+  width: 85px;
+}
+.offer .right-section {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 1rem;
+  text-align: left;
+  max-width: 75%;
+  color: #ffffff;
+}
+.offer .right-section h2 {
+  font-weight: 400;
+  font-size: 50px;
+}
+.offer .right-section p {
+  font-size: 22px;
+}
+.offer .right-section .date {
+  display: flex;
+  gap: 2rem;
+}
+.offer .right-section .date span {
+  width: 75px;
+  height: 75px;
+  background-color: #ffffff;
+  color: var(--sec-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-weight: 700;
+  border-radius: 5px;
+}
+.offer .right-section button {
+  width: 230px;
+  height: 80px;
+  background-color: #ffffff;
+  color: var(--sec-color);
+  font-size: 28px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+@media (max-width: 1050px) {
+  .offer .left-section img.dots {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  .offer {
+    grid-template-columns: 1fr;
+    padding: 10px 0;
+  }
+  .offer .left-section {
+    display: none;
+  }
+  .offer .right-section {
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 0 10px;
+  }
+  .offer .right-section h2 {
+    font-size: 32px;
+  }
+  .offer .right-section p {
+    font-size: 16px;
+  }
+  .offer .right-section .date span {
+    width: 60px;
+    height: 60px;
+    font-size: 18px;
+    font-weight: 700;
+    border-radius: 5px;
+  }
+  .offer .right-section button {
+    width: 150px;
+    height: 50px;
+    font-size: 18px;
+  }
 }
 /*End Offer Section*/
