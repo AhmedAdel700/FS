@@ -718,5 +718,14 @@ header nav .toggle-menu ul {
     gap: 1.3rem;
     padding: 40px 30px;
   }
+  .feedback .feed {
+    margin-bottom: 3.5rem;
+  }
+  .feedback img {
+    padding: 0.5rem;
+    border-radius: 5px;
+    margin: 0 2.5rem;
+    cursor: pointer;
+  }
 }
 /*End Feedback Section*/
