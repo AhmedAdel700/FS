@@ -239,6 +239,25 @@ header nav .toggle-menu ul {
   max-width: fit-content;
   position: relative;
 }
+.landing .model .box::before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-color: var(--text);
+  left: -115px;
+  top: 30px;
+}
+.landing .model .box::after {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-color: var(--text);
+  right: -80px;
+  bottom: 30px;
+  z-index: -1;
+}
 .landing .model .box .rec {
   max-width: 24rem;
   max-height: 27rem;
@@ -266,6 +285,19 @@ header nav .toggle-menu ul {
   top: 70%;
   transform: translateY(-50%);
 }
+@media (max-width: 1050px) {
+  .landing .model .box .g2 {
+    top: 45%;
+  }
+  .landing .model .box::before {
+    left: -115px;
+    top: 80px;
+  }
+  .landing .model .box::after {
+    right: -80px;
+    bottom: 260px;
+  }
+}
 @media (max-width: 991px) {
   .landing {
     gap: 0;
@@ -285,6 +317,17 @@ header nav .toggle-menu ul {
   }
   .landing .model {
     margin: 3rem auto;
+  }
+  .landing .model .box .g2 {
+    top: 45%;
+  }
+  .landing .model .box::before {
+    left: -115px;
+    top: 5px;
+  }
+  .landing .model .box::after {
+    right: -80px;
+    bottom: 70px;
   }
   .landing .model .box .rec {
     max-width: 20rem;
@@ -318,6 +361,18 @@ header nav .toggle-menu ul {
     margin: 0 auto;
     margin-bottom: 8px;
     padding: 0 15px;
+  }
+  .landing .model .box::before {
+    width: 50px;
+    height: 50px;
+    left: -65px;
+    top: 70px;
+  }
+  .landing .model .box::after {
+    width: 50px;
+    height: 50px;
+    right: -60px;
+    bottom: 150px;
   }
   .landing article .box .explore {
     width: 8rem;
@@ -555,17 +610,27 @@ header nav .toggle-menu ul {
   position: relative;
   bottom: -42px;
 }
+.offer .left-section span {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  left: 25%;
+  top: 60%;
+  background-color: #4841318e;
+}
 .offer .left-section img.model {
   position: absolute;
   max-width: 300px;
   top: -48px;
   left: 160px;
+  z-index: 2;
 }
 .offer .left-section img.dots {
   position: absolute;
   left: 110px;
   top: 65%;
   width: 85px;
+  z-index: 2;
 }
 .offer .right-section {
   display: flex;
@@ -616,6 +681,9 @@ header nav .toggle-menu ul {
     left: unset;
   }
   .offer .left-section img.dots {
+    display: none;
+  }
+  .offer .left-section span {
     display: none;
   }
 }
@@ -825,6 +893,9 @@ footer .info .email form button:hover {
   color: #000;
 }
 @media (max-width: 767px) {
+  footer .info {
+    padding: 25px 20px;
+  }
   footer .info .social h3 {
     font-size: 40px;
     margin-bottom: 0.5rem;
