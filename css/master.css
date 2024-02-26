@@ -1,17 +1,20 @@
 /************************************************
 Table Of Content
 ***********************************************
-1. Golbal Rules
+1.Golbal Rules
 2.Header - responsive (media query)
 3.Landing - responsive (media query)
 4.Brands Section - responsive (media query)
 5.Shop Section - responsive (media query)
 6.Products Section - responsive (media query)
+7.Offer Section - responsive (media query)
+8.Feedback Section - responsive (media query)
 ************************************************/
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
 /*Start Of Global Rules*/
 :root {
   --sec-color: rgba(0, 0, 0, 0.75);
+  --text: #ffffff;
 }
 * {
   box-sizing: border-box;
@@ -651,3 +654,69 @@ header nav .toggle-menu ul {
   }
 }
 /*End Offer Section*/
+
+/*Start Feedback Section*/
+.feedback {
+  margin-top: 7rem;
+  text-align: center;
+}
+.feedback h2 {
+  color: var(--sec-color);
+  font-size: 50px;
+}
+.feedback p {
+  color: rgba(0, 0, 0, 0.65);
+  font-size: 18px;
+}
+.feedback .feed {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+  place-items: center;
+  margin-bottom: 5rem;
+}
+.feedback .feed .box {
+  background-color: #8d909f98;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.5rem;
+  max-width: 477px;
+  max-height: 311px;
+  text-align: start;
+  border-radius: 5px;
+  color: var(--text);
+  padding: 42px;
+  margin: 2rem 0 0;
+}
+.feedback .feed .box:nth-child(2) {
+  background-color: #8d909f;
+}
+.feedback .feed .box i {
+  font-size: 31px;
+}
+.feedback .feed .box span {
+  font-size: 28px;
+}
+.feedback .feed .box p {
+  color: var(--text);
+}
+.feedback img {
+  padding: 0.5rem;
+  border-radius: 5px;
+  margin: 0 5rem;
+  cursor: pointer;
+}
+.feedback .arrow-left {
+  background-color: #8d909fa6;
+}
+.feedback .arrow-right {
+  background-color: #8d909f;
+}
+@media (max-width: 767px) {
+  .feedback .feed .box {
+    gap: 1.3rem;
+    padding: 40px 30px;
+  }
+}
+/*End Feedback Section*/
